@@ -14,6 +14,7 @@ public class MultipleChoiceQuestion implements Question {
 	String answer3letter;
 	String returnanswer;
 	int numchoser;
+	boolean pointsawarded = false;
 	Random rand = new Random();
 	
 	public MultipleChoiceQuestion(String question,String CorrectAnswer, String answer1, String answer2, String answer3) {
@@ -87,6 +88,7 @@ public class MultipleChoiceQuestion implements Question {
 	@Override
 	public boolean isCorrectAnswer(String answer) {
 		if(this.correctanswer.toLowerCase().equals(answer.toLowerCase())) {
+			this.pointsawarded = true;
 			return true;
 		}else {
 			return false;
