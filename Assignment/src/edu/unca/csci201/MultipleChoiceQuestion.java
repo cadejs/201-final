@@ -14,7 +14,6 @@ public class MultipleChoiceQuestion implements Question {
 	String answer3letter;
 	String returnanswer;
 	int numchoser;
-	
 	Random rand = new Random();
 	
 	public MultipleChoiceQuestion(String question,String CorrectAnswer, String answer1, String answer2, String answer3) {
