@@ -2,8 +2,8 @@ package edu.unca.csci201;
 
 public class Quiz {
 Question[] quiz = new Question[2];
-	public void addQuestion(Question q, ) {
-		Question one = new TrueFalseQuestion(q);
+	public Question addQuestion(Question q ) {
+	return q;
 		
 	}
 	

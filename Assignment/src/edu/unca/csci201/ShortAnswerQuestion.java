@@ -2,22 +2,34 @@ package edu.unca.csci201;
 
 public class ShortAnswerQuestion implements Question {
 
-	@Override
+	String answer;
+	String question;
+	boolean pointsawarded = false;
+	
+	public ShortAnswerQuestion( String question, String answer) {
+		this.answer = answer;
+		this.question = question;
+	} 
+	
+	
 	public String getTheQuestionText() {
-		// TODO Auto-generated method stub
-		return null;
+				return this.question;
 	}
 
 	@Override
 	public boolean isCorrectAnswer(String answer) {
-		// TODO Auto-generated method stub
-		return false;
+		if (this.answer.toLowerCase().equals(answer.toLowerCase())) {
+			return true;
+		}else {
+			return false;
+		}
+		
 	}
 
 	@Override
 	public String getCorrectAnswer() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return this.answer;
 	}
 
 }
