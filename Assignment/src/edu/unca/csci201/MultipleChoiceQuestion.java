@@ -71,8 +71,8 @@ public class MultipleChoiceQuestion implements Question {
 		case 3:
 			System.out.println(this.answer1letter + ": \t" + this.answer1 );
 			System.out.println(this.answer2letter + ": \t" + this.answer2 );
-			System.out.println(this.answer3letter + ": \t" + this.answer3 );
 			System.out.println(this.correctletter + ": \t" + this.correctanswer);
+			System.out.println(this.answer3letter + ": \t" + this.answer3 );
 			break;
 		case 4:
 			System.out.println(this.answer1letter + ": \t" + this.answer1 );
@@ -87,7 +87,7 @@ public class MultipleChoiceQuestion implements Question {
 
 	@Override
 	public boolean isCorrectAnswer(String answer) {
-		if(this.correctanswer.toLowerCase().equals(answer.toLowerCase())) {
+		if(this.correctletter.toLowerCase().equals(answer.toLowerCase())) {
 			this.pointsawarded = true;
 			return true;
 		}else {
