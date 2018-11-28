@@ -1,6 +1,6 @@
 package edu.unca.csci201;
 
-import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class QuizTime {
 	//create twenty-five question
@@ -9,8 +9,11 @@ public class QuizTime {
 	//figure out how to add questions to array
 	
 	public static void main(String[] args) {
-		//create all of the questions here
-		String cade;
+		//create all of the questions here //go back and spell check
+		double quizgrade = 0;
+		DecimalFormat df = new DecimalFormat("#0.##");
+		
+		
 		ShortAnswerQuestion s1 = new ShortAnswerQuestion("what famous trilogoy(now expanded) was centered around a new branch of predictive mathematics that could predict the fall of intergalatic emprires?", "The Foundation");
 		ShortAnswerQuestion s2 = new ShortAnswerQuestion("What book by Issac Asimov shares a name with a featuring Will Smith?", "I Robot");
 		ShortAnswerQuestion s3 = new ShortAnswerQuestion("In Douglas Adams Hitch Hikers Guide to Galaxy what is the meaning of life?", "42");
@@ -27,15 +30,29 @@ public class QuizTime {
 		TrueFalseQuestion t2 = new TrueFalseQuestion("Pendragon is a series of book focusing on the writing of a mutated lizard." , "false");
 		TrueFalseQuestion t3 = new TrueFalseQuestion("The Mule is a character from The Foundation who is really ugly so no one bothers him and thats why he is strong." , "false");
 		TrueFalseQuestion t4 = new TrueFalseQuestion("The first animated french movie was a science fiction piece called \"The Fantastic Planet\""  , "true");
-
 		TrueFalseQuestion t5 = new TrueFalseQuestion("Bonus: If the case of a goverment collapse the supreme court will be transported to Asheville, North Caroline" , "true");
 
-		q1.getTheQuestionText();
-	Scanner scan = new Scanner(System.in);
-	 cade = scan.nextLine();
-if(q1.isCorrectAnswer(cade)==true) {
-	System.out.println("nice");
-}
+		Question[] quizarray = new Question[15];
+		quizarray[0] = s1;
+		quizarray[1] = s2;
+		quizarray[2] = s3;
+		quizarray[3] = s4;
+		quizarray[4] = s5;
+		quizarray[5] = q1;
+		quizarray[6] = q2;
+		quizarray[7] = q3;
+		quizarray[8] = q4;
+		quizarray[9] = q5;
+		quizarray[10] = t1;
+		quizarray[11] = t2;
+		quizarray[12] = t3;
+		quizarray[13] = t4;
+		quizarray[14] = t5;
+		
+		quizgrade = Quiz.giveQuiz(quizarray);
+		System.out.println("You got a " + df.format(quizgrade/quizarray.length*100) + "%");
+		
+		
 
 
 

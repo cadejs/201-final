@@ -53,7 +53,7 @@ public class MultipleChoiceQuestion implements Question {
 
 	public String getTheQuestionText() {
 		System.out.println(this.question);
-		System.out.println("what is the correct answer choice?");
+		//System.out.println("what is the correct answer choice?");
 		//using a switch to make sure the answers come out in the right order
 		switch (this.numchoser) {
 		case 1:
@@ -82,7 +82,7 @@ public class MultipleChoiceQuestion implements Question {
 			break;
 		}
 		
-		return null;
+		return "";
 	}
 
 	@Override
@@ -105,4 +105,6 @@ public class MultipleChoiceQuestion implements Question {
 		
 	}
 
+	
+	
 }
