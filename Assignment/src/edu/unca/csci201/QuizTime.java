@@ -52,8 +52,7 @@ public class QuizTime {
 		quizgrade = Quiz.giveQuiz(quizarray);
 		System.out.println("You got a " + df.format(quizgrade/quizarray.length*100) + "%");
 		
-		
-
+		//System.out.println(quizarray[1].getClass().);
 
 
 	}
