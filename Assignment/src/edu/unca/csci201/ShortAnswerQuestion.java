@@ -4,6 +4,7 @@ public class ShortAnswerQuestion implements Question {
 
 	String answer;
 	String question;
+	String questionprompt = "This is a short answer question please input a short answer.";
 	boolean pointsawarded = false;
 	
 	public ShortAnswerQuestion( String question, String answer) {
@@ -13,7 +14,8 @@ public class ShortAnswerQuestion implements Question {
 	
 	
 	public String getTheQuestionText() {
-				return this.question;
+		System.out.println(this.questionprompt);		
+		return this.question;
 	}
 
 	@Override

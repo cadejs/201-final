@@ -21,6 +21,7 @@ static Question[] wrongarray = new Question[15];
 		//new array of wrong answers to give it to the quiz taker
 		if(correctquestions!=0) {
 			System.out.println("Here are the questions you missed.");
+			System.out.println("");
 		//indicating quiz has already been run
 			for (int i =0; i < wrongarray.length;i++) {
 				if (wrongarray[i] ==  null) {

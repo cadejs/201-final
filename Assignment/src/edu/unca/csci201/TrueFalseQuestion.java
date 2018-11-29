@@ -4,6 +4,8 @@ public class TrueFalseQuestion implements Question {
 
 	String question;
 	String correctanswer;
+	String questionprompt = "This is a true false question, please input either true or false.";
+
 	boolean canswer = false;
 	boolean pointsawarded = false;
 	
@@ -17,7 +19,7 @@ public class TrueFalseQuestion implements Question {
 	
 	@Override
 	public String getTheQuestionText() {
-		
+		System.out.println(this.questionprompt);	
 		return question;
 	}
 

@@ -52,7 +52,7 @@ public class QuizTime {
 		
 		quizgrade = Quiz.giveQuiz(quizarray);
 		System.out.println("You got a " + df.format(quizgrade/quizarray.length*100) + "%" + 
-		" Your correct answers will follow soon.");
+		" The questions you missed will follow soon.");
 		
 		
 		TimeUnit.SECONDS.sleep(5);

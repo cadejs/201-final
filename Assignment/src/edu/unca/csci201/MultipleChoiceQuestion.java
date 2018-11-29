@@ -12,7 +12,7 @@ public class MultipleChoiceQuestion implements Question {
 	String answer1letter;
 	String answer2letter;
 	String answer3letter;
-	//String returnanswer;
+	String questionprompt = "This is a multiple choice question, please input a,b,c or d.";
 	
 	int numchoser;
 	boolean pointsawarded = false;
@@ -53,7 +53,9 @@ public class MultipleChoiceQuestion implements Question {
 	}
 
 	public String getTheQuestionText() {
+		System.out.println(this.questionprompt);
 		System.out.println(this.question);
+		
 		//System.out.println("what is the correct answer choice?");
 		//using a switch to make sure the answers come out in the right order
 		switch (this.numchoser) {
